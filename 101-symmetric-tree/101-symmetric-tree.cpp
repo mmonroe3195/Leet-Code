@@ -16,15 +16,15 @@ public:
             
     }
     
-    bool compare(TreeNode* l, TreeNode* r) {
+    bool compare(TreeNode* node1, TreeNode* node2) {
     
-        if(!l && !r)
+        if(!node1 && !node2)
             return true;
         
-        else if((!l && r )|| (l && !r) || (l->val != r->val))
+        else if((!node1 && node2)|| (node1 && !node2) || (node1->val != node2->val))
             return false;
         
-        return compare(l->right, r-> left) && compare(l->left, r-> right);
+        return compare(node1->right, node2-> left) && compare(node1->left, node2-> right);
         
         
     }
