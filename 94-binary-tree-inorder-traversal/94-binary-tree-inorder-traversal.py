@@ -4,6 +4,7 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
+
 class Solution(object):
     def iot_helper(self, root, arr):
         if root.left:
@@ -20,7 +21,7 @@ class Solution(object):
         arr = []
         if not root:
             return arr
-
+        
         return self.iot_helper(root, arr)
    
             
