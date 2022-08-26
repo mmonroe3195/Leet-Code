@@ -11,10 +11,10 @@ class Solution(object):
         :rtype: TreeNode
         """
         
-        #saving the old left and right
         if not root:
             return root
         
+        #saving the old left and right
         new_left = root.right
         new_right = root.left
         
