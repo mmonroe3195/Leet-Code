@@ -6,6 +6,6 @@ class Solution(object):
         """
         # would be easy to do in O(nlog(n))
         # sort list -> iterate through to see missing number range
-        # this way is more efficent though
+        # this way is better though
         return sum(range(len(nums) + 1)) - sum(nums)
         
