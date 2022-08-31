@@ -10,10 +10,8 @@
  */
 class Solution {
 public:
-    
-    /* Just a quickly created solution to the problem
-    will clean up code and comment out later */ 
-    
+
+    /* Helper method */
     void mergeHelper(ListNode* list1, ListNode* list2, ListNode* curr) {
         
         if (!list1 && !list2)
