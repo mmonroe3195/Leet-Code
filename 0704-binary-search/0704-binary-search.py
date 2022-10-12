@@ -14,15 +14,12 @@ class Solution(object):
         if nums[mid] == target:
             return mid
         
-        left = self.search(nums[:mid], target)
-        
-        if left != -1:
-            return left
+        elif target < nums[mid]:
+            return self.search(nums[:mid], target)
         
         right = self.search(nums[mid + 1:], target)
         
         if right == -1:
             return -1
         
-        else:
-            return mid + 1 + right
+        return mid + 1 + right
