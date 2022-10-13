@@ -1,12 +1,9 @@
 import math
 
 class Solution(object):
-    def search(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: int
-        """
+    
+    #method one: using no helper method
+    """def search(self, nums, target):
         if len(nums) == 0:
             return -1
         
@@ -22,4 +19,22 @@ class Solution(object):
         if right == -1:
             return -1
         
-        return mid + 1 + right
+        return mid + 1 + right"""
+    
+    #method two: using a helper function
+    def searchHelper(self, nums, start, end, target):
+        if start > end:
+            return -1
+            
+        mid = (start + end) // 2
+           
+        if target == nums[mid]:
+            return mid
+            
+        elif target < nums[mid]:
+            return self.searchHelper(nums, start, mid - 1, target)
+            
+        return self.searchHelper(nums, mid + 1, end, target)
+            
+    def search(self, nums, target):
+        return self.searchHelper(nums, 0, len(nums) - 1, target)
