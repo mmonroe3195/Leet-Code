@@ -34,7 +34,8 @@ class Solution(object):
         elif target < nums[mid]:
             return self.searchHelper(nums, start, mid - 1, target)
             
-        return self.searchHelper(nums, mid + 1, end, target)
+        else:
+            return self.searchHelper(nums, mid + 1, end, target)
             
     def search(self, nums, target):
         return self.searchHelper(nums, 0, len(nums) - 1, target)
