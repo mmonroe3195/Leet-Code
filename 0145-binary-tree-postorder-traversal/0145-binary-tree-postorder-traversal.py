@@ -6,15 +6,11 @@
 #         self.right = right
 class Solution(object):
     def traversalHelper(self, root, lst):  
-        if not root:
-            return lst
-        
-        self.traversalHelper(root.left, lst)
-        self.traversalHelper(root.right, lst)
-        lst.append(root.val)
-        
-        return
-        
+        if root:
+            self.traversalHelper(root.left, lst)
+            self.traversalHelper(root.right, lst)
+            lst.append(root.val)
+                
     def postorderTraversal(self, root):
        
         lst = []
