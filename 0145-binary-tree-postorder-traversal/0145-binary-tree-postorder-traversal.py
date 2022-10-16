@@ -5,8 +5,7 @@
 #         self.left = left
 #         self.right = right
 class Solution(object):
-    def traversalHelper(self, root, lst):
-        
+    def traversalHelper(self, root, lst):  
         if not root:
             return lst
         
@@ -14,7 +13,7 @@ class Solution(object):
         self.traversalHelper(root.right, lst)
         lst.append(root.val)
         
-        return lst
+        return
         
     def postorderTraversal(self, root):
        
