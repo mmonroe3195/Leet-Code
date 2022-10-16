@@ -5,8 +5,7 @@
 #         self.left = left
 #         self.right = right
 class Solution(object):
-    
-    """def traversalHelper(self, root, lst = []):
+    def traversalHelper(self, root, lst = []):
         
         if not root:
             return lst
@@ -19,16 +18,6 @@ class Solution(object):
         
     def postorderTraversal(self, root):
        
-        return self.traversalHelper(root)"""
-        
-    # recursively 
-    def postorderTraversal(self, root):
-        res = []
-        self.dfs(root, res)
-        return res
-    
-    def dfs(self, root, res):
-        if root:
-            self.dfs(root.left, res)
-            self.dfs(root.right, res)
-            res.append(root.val)
+        lst = []
+        self.traversalHelper(root, lst)
+        return lst
