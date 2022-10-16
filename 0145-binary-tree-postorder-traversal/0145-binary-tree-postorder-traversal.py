@@ -5,7 +5,7 @@
 #         self.left = left
 #         self.right = right
 class Solution(object):
-    def traversalHelper(self, root, lst = []):
+    def traversalHelper(self, root, lst):
         
         if not root:
             return lst
