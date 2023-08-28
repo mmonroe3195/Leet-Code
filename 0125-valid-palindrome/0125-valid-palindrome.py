@@ -1,22 +1,18 @@
-import re
-
 class Solution(object):
     def isPalindrome(self, s):
         """
         :type s: str
         :rtype: bool
         """
+        #runtime is O(n)
         s = s.lower()
-        s = re.sub(r'[^a-zA-Z0-9]', '', s)
+        
+        #removes all whitespace and non-alphanumeric chars
+        s = re.sub(r'[\W_]', '', s) 
         print(s)
-        i = 0
-        j = len(s) - 1
         
-        if len(s) > 0:
-            while i < j:
-                if s[i] != s[j]:
-                    return False
-                i += 1
-                j -= 1
-        
+        for i in range(len(s) // 2):
+            if s[i] != s[len(s) - 1 - i]:
+                return False
+            
         return True
