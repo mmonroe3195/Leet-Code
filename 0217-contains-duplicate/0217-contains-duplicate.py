@@ -6,21 +6,20 @@ class Solution(object):
         """
         
         # O(n) time complexity and O(n) space complexity
-        """
         dict = {}
         for i in nums:
              if dict.get(i):
                  return True
             
-             dict[i] = 1"""
+             dict[i] = 1
         
         # O(nlogn) time complexity and O(1) space complexity
-        nums.sort()
+        """nums.sort()
         print(nums)
         for i in range(len(nums) - 1):
             if nums[i] == nums[i + 1]:
                 return True
-        return False      
+        return False """     
         
             
             
