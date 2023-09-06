@@ -15,7 +15,7 @@ class Solution(object):
                 counter[str(j)] += 1
             
             # use each counter as a key for a dictionary
-            # each word with the same counter is an anagram so the word should be                   appended as a value for the key
+            # each word with the same counter is an anagram so the word should be appended as a value for the key
             
             key = tuple(sorted(counter.items()))
             if dict.get(key):
