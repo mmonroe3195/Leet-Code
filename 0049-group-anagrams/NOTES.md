@@ -1,1 +1,2 @@
-​
+​1.) Attempt one of this problem- decided to use a collection counter to determine which words were anagrams. The goal was then to use the collection counters as keys for a dict. All words that had the same collection counter would be stored as values for the specific key. However, I later realized that I would need to sort the counters so that they collection counters before they could be used as keys for the dict. This method was ineffective, but it was possible to solve the problem this way.
+2.) Attempt two for this problem- decided to revise this approach so that it was faster and less clunky. 
